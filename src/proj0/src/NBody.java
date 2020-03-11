@@ -1,3 +1,5 @@
+package proj0.src;
+
 public class NBody {
     public static double readRadius(String path){
         In in = new In(path);

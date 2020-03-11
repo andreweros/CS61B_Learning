@@ -1,8 +1,16 @@
+package proj0.src;
+
 /**
- *  Tests Nbody.readRadius. Reads in ./data/planets.txt and checks to see that
- *  result matches hard coded value.
+ *  Tests calcDistance
  */
-public class TestReadRadius {
+public class TestCalcDistance {
+
+    /**
+     *  Tests calcDistance.
+     */
+    public static void main(String[] args) {
+        checkCalcDistance();
+    }
 
     /**
      *  Checks whether or not two Doubles are equal and prints the result.
@@ -21,18 +29,16 @@ public class TestReadRadius {
     }
 
     /**
-     *  Checks the NBody.readRadius() method.
+     *  Checks the Planet class to make sure calcDistance works.
      */
-    private static void checkReadRadius() {
-        System.out.println("Checking readRadius...");
-        String planetsTxtPath = "./data/planets.txt";
-        /* If the following line fails to compile, you probably need to make
-         * a certain method static! */
-        double actualOutput = NBody.readRadius(planetsTxtPath);
-        checkEquals(actualOutput, 2.50E11, "readRadius()", 0.01);
-    }
+    private static void checkCalcDistance() {
+        System.out.println("Checking calcDistance...");
 
-    public static void main(String[] args) {
-        checkReadRadius();
+        Planet p1 = new Planet(1.0, 1.0, 3.0, 4.0, 5.0, "jupiter.gif");
+        Planet p2 = new Planet(2.0, 1.0, 3.0, 4.0, 5.0, "jupiter.gif");
+        Planet p3 = new Planet(4.0, 5.0, 3.0, 4.0, 5.0, "jupiter.gif");
+
+        checkEquals(p1.calcDistance(p2), 1.0, "calcDistance()", 0.01);
+        checkEquals(p1.calcDistance(p3), 5.0, "calcDistance()", 0.01);
     }
 }

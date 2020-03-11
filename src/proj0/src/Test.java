@@ -1,3 +1,5 @@
+package proj0.src;
+
 public class Test {
     public static int test(int a){
         a = a+6;

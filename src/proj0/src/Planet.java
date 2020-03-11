@@ -1,3 +1,5 @@
+package proj0.src;
+
 import org.jetbrains.annotations.NotNull;
 
 public class Planet {
