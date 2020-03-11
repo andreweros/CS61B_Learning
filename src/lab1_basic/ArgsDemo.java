@@ -1,4 +1,4 @@
-package lab1;
+package lab1_basic;
 
 public class ArgsDemo {
     public static void main(String[] args) {

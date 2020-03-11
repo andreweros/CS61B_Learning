@@ -1,4 +1,4 @@
-package lab1;
+package lab1_basic;
 
 public class Dog implements Comparable<Dog> {
     private String name;
