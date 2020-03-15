@@ -1,9 +1,8 @@
 package lab2;
 
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
+
 import org.junit.Test;
 import org.junit.Assert;
 
@@ -92,6 +91,15 @@ public class ArrayMap<K, V> implements Map61B<K, V> {
             keyset.add(keys[i]);
         }
         return keyset;
+    }
+
+    @Override
+    public List<K> keys() {
+        List<K> keylist = new ArrayList<>();
+        for (int i = 0; i < size; i += 1) {
+            keylist.add(keys[i]);
+        }
+        return keylist;
     }
 
     @Override

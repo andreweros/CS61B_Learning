@@ -1,4 +1,5 @@
 package lab2;
+import java.util.List;
 import java.util.Set;
 /* Your implementation BSTMap should implement this interface. To do so,
  * append "implements Map61B<K,V>" to the end of your "public class..."
@@ -18,6 +19,7 @@ public interface Map61B<K, V> extends Iterable<K> {
         return get(key) != null;
     }
 
+    List<K> keys();
     /* Associates the specified value with the specified key in this map. */
     void put(K key, V value);
 

@@ -2,6 +2,9 @@ package lab2;
 
 import org.junit.Test;
 
+import java.util.List;
+import java.util.Set;
+
 import static org.junit.Assert.assertEquals;
 
 public class MapHelper {
@@ -12,7 +15,16 @@ public class MapHelper {
         }
         return null;
     }
-    
+    public static <K extends Comparable<K> , V> K maxKey(ArrayMap<K, V> map) {
+        List<K> keylist = map.keys();
+        K largest = keylist.get(0);
+        for(K k : keylist) {
+            if(k.compareTo(largest) > 0) {
+                largest = k;
+            } 
+        }
+        return largest;
+    }
     @Test
     public void testGet() {
         Map61B<String, Integer> m = new ArrayMap<>();
